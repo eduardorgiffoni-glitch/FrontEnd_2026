@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Material de Estudo Digital</title>
+</head>
+<style>	
+	body {
+ 		background-color: #f4efe6;
+   		margin: 0;
+    		font-family: 'Georgia', serif;
+	}
+	
+	.container {
+   			width: 80%;
+ 		     	margin: auto;
+	}
+	head {  color: #0000CD;
+   	 	text-align: left;
+    		padding: 30px 0;
+    		font-size: 45px;
+
+
+	}
+
+	h1 {
+  		 color: #0000CD;
+   	 	text-align: left;
+    		padding: 30px 0;
+    		font-size: 45px;
+	}
+
+	img {
+    		width: 500px;
+    		display: block;
+    		margin-left: 50px auto;
+   	 	border-radius: 4px;
+	}
+
+	h2 {
+  		 color: #5c3317;
+   	 	text-align: center;
+    		padding: 30px 0;
+    		font-size: 30px;
+	}
+	
+	p {	
+		text-align: center;
+  		font-family: "Times New Roman", Times, serif;
+ 		font-size: 20px;
+	}
+
+</style>
+
+
+<body>
+	<div class= "header">
+		<h1><i>Vetores em C<i></h1>
+		<p>Um  vetor,  ou arranjo (= array), é uma estrutura de dados que armazena uma sequência de objetos, todos do mesmo tipo, em posições consecutivas da memória RAM (= random access memory) do computador.  Essa estrutura permite acesso aleatório: qualquer elemento do vetor pode ser alcançado diretamente, sem passar pelos elementos anteriores (o décimo elemento, por exemplo, pode ser alcançado sem que seja necessário passar antes pelo primeiro, segundo, etc., nono elementos). </p>
+		<img src ="https://hermes.dio.me/assets/articles/016b68c7-0e8f-4263-a2f5-b23576a5fc8c.png">
+	</div>
+
+	<nav>
+		<a href="#sobre" target ="_self">Sobre</a>
+		<a href="#projetos" target ="_self">Projetos</a>
+		<a href="#Contato" target ="_self">Contato</a>
+
+	</nav>
+
+</body>
+</html>
