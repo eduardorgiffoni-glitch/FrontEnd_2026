@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Virtual</title>
+
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="min-h-screen flex flex-col"
+style="
+    background-image: url('bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+">
+
+<!-- TOPO -->
+<div class="w-full flex items-center justify-start p-4 gap-4">
+
+    <div class="avatar">
+        <div class="w-16 rounded-full ring ring-primary ring-offset-2">
+            <img src="b_a.png" />
+        </div>
+    </div>
+
+    <input 
+        type="text" 
+        placeholder="Nome da criatura..."
+        class="input input-secondary"
+    />
+
+</div>
+
+<!-- CENTRO -->
+<div class="flex flex-col items-center justify-center flex-1">
+
+    <!-- CRIATURA -->
+    <img 
+        id="mainImage"
+        src="b_n.png"
+        class="w-72"
+    />
+
+    <!-- BOTÃO COMIDA -->
+    <div class="mt-10">
+        <img 
+            id="btnImage"
+            src="btn.png"
+            class="w-32 active:scale-95 transition"
+            onclick="alimentar()"
+        />
+    </div>
+
+</div>
+
+<!-- BOTÃO SECRETO (invisível) -->
+<div onclick="mostrarFerlini()" 
+     style="
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        width: 60px;
+        height: 60px;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 999;
+">
+</div>
+
+<!-- IMAGEM SECRETA -->
+<img 
+    id="ferlini"
+    src="ferlini.png"
+    style="
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.5);
+        width: 300px;
+        border-radius: 20px;
+        box-shadow: 0 0 25px black;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    "
+/>
+
+<!-- TEXTO BONUS -->
+<div id="msgFerlini"
+     style="
+        display: none;
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 2px 5px black;
+        z-index: 1000;
+">
+    🔥 VOCÊ DESCOBRIU O SEGREDO 🔥
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
