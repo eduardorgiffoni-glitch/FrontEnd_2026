@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crédito para Festas & Eventos</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            width: 420px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .campo {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #resultado {
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f7f7f7;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Infinity Bank Eventos</h1>
+
+        <div class="campo">
+
+            <label>Escolha o Pacote</label>
+
+            <select id="pacote">
+
+                <option value="50">Standard - R$ 50,00</option>
+
+                <option value="80">Premium - R$ 80,00</option>
+
+                <option value="120">Infinity Deluxe - R$ 120,00</option>
+
+            </select>
+
+        </div>
+
+        <div class="campo">
+
+            <label>Quantidade de Pessoas</label>
+
+            <input type="number" id="pessoas">
+
+        </div>
+
+        <button id="calcular">
+            Calcular Orçamento
+        </button>
+
+        <div id="resultado"></div>
+
+    </div>
+
+    <script>
+
+        const botao = document.getElementById("calcular");
+
+        botao.addEventListener("click", () => {
+
+            let valorPacote =
+                Number(document.getElementById("pacote").value);
+
+            let pessoas =
+                Number(document.getElementById("pessoas").value);
+
+            // Valor base
+            let custoBruto = valorPacote * pessoas;
+
+            // Taxa de serviço
+            let taxaServico = custoBruto * 0.10;
+
+            // Valor com taxa
+            let subtotal = custoBruto + taxaServico;
+
+            // Desconto
+            let desconto = 0;
+
+            if (pessoas > 100) {
+
+                desconto = subtotal * 0.05;
+
+            }
+
+            // Total final
+            let totalFinal = subtotal - desconto;
+
+            const resultado =
+                document.getElementById("resultado");
+
+            resultado.innerHTML = `
+
+                <strong>Resumo do Evento</strong><br><br>
+
+                Custo Bruto: R$ ${custoBruto.toFixed(2)} <br>
+
+                Taxa de Serviço (10%): 
+                R$ ${taxaServico.toFixed(2)} <br>
+
+                Desconto Aplicado: 
+                R$ ${desconto.toFixed(2)} <br>
+
+                <strong>Total Final: 
+                R$ ${totalFinal.toFixed(2)}</strong>
+
+            `;
+
+        });
+
+    </script>
+
+</body>
+</html>
