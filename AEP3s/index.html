@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioMercado - Apoio ao Produtor Local</title>
+    
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --secondary: #81c784;
+            --background: #f1f8e9;
+            --dark: #1b5e20;
+            --alert: #e65100;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            color: #333;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Responsividade para celulares */
+        @media (max-width: 768px) { 
+            .container { 
+                grid-template-columns: 1fr; 
+            } 
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        h2 { 
+            color: var(--dark); 
+            border-bottom: 2px solid var(--secondary); 
+            padding-bottom: 5px; 
+        }
+
+        label { 
+            display: block; 
+            margin: 10px 0 5px; 
+            font-weight: bold; 
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        button:hover { 
+            background-color: var(--dark); 
+        }
+
+        .btn-alert {
+            background-color: var(--alert);
+        }
+
+        .btn-alert:hover {
+            background-color: #bf360c;
+        }
+
+        .lista-produtos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .item-produto {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 4px;
+            background: #fafafa;
+            transition: transform 0.2s;
+        }
+
+        .item-produto:hover {
+            transform: scale(1.02);
+        }
+
+        .queue-zone {
+            margin-top: 20px;
+            background: #e8f5e9;
+            border: 2px dashed var(--primary);
+        }
+
+        .pedido-item {
+            background: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 5px solid var(--primary);
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Plataforma BioMercado</h1>
+    <p>Conectando pequenos produtores diretamente ao consumidor (ODS 8)</p>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2>🛒 Área do Consumidor</h2>
+        <p>Escolha os produtos frescos da região:</p>
+        <div id="vitrine" class="lista-produtos">
+            </div>
+
+        <h3 style="margin-top:20px;">Finalizar Pedido</h3>
+        <label for="compra-qtd">Quantidade:</label>
+        <input type="number" id="compra-qtd" value="1" min="1">
+        <button onclick="realizarCompra()">Confirmar Compra</button>
+    </div>
+
+    <div class="card">
+        <h2>🧑‍🌾 Painel do Produtor (Gerenciamento)</h2>
+        <label>Produtor Atual: <strong>Eduardo Giffoni (Sítio Verde)</strong></label>
+        
+        <h3>Cadastrar Novo Produto</h3>
+        <input type="text" id="prod-nome" placeholder="Ex: Alface Orgânica">
+        <input type="number" id="prod-preco" placeholder="Preço (R$)" step="0.01">
+        <input type="number" id="prod-estoque" placeholder="Estoque Inicial">
+        <button onclick="cadastrarProdutoDoForm()">Cadastrar Produto</button>
+
+        <div class="card queue-zone">
+            <h3>📦 Fila de Pedidos Pendentes (Estrutura: Fila)</h3>
+            <p><small>Lógica FIFO: O primeiro que entra é o primeiro a ser atendido.</small></p>
+            <div id="fila-pedidos">
+                </div>
+            <button class="btn-alert" onclick="processarProximoPedido()">Atender/Despachar Próximo Pedido</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
