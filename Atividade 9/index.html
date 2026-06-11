@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Média Escolar</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+
+        .container{
+
+            background-color: white;
+
+            width: 420px;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+        }
+
+        h1{
+
+            margin-bottom: 30px;
+
+            color: #0080ff;
+        }
+
+        table{
+
+            width: 100%;
+
+            border-spacing: 15px;
+        }
+
+        td{
+
+            text-align: left;
+        }
+
+        label{
+
+            font-weight: bold;
+
+            color: #333;
+        }
+
+        input{
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: 2px solid #ccc;
+
+            border-radius: 10px;
+
+            outline: none;
+
+            font-size: 16px;
+
+            transition: 0.3s;
+        }
+
+        input:focus{
+
+            border-color: #0080ff;
+        }
+
+        button{
+
+            width: 100%;
+
+            padding: 12px;
+
+            margin-top: 20px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background-color: #0080ff;
+
+            color: white;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover{
+
+            background-color: #005ecb;
+        }
+
+        #resultado{
+
+            margin-top: 25px;
+
+            font-size: 20px;
+
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎓 Média Escolar</h1>
+
+        <table>
+
+            <tr>
+
+                <td>
+                    <label>Nome do Aluno</label>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <input type="text"
+                           id="nome"
+                           placeholder="Digite o nome">
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <label>Nota 1</label>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <input type="number"
+                           id="nota1"
+                           placeholder="Digite a primeira nota">
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <label>Nota 2</label>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <input type="number"
+                           id="nota2"
+                           placeholder="Digite a segunda nota">
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <label>Nota 3</label>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <input type="number"
+                           id="nota3"
+                           placeholder="Digite a terceira nota">
+                </td>
+
+            </tr>
+
+        </table>
+
+        <button id="calcular">
+            Calcular Média
+        </button>
+
+        <p id="resultado"></p>
+
+    </div>
+
+    <script src="Media_Escolar.js"></script>
+
+</body>
+
+</html>
