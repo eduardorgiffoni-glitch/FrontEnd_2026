@@ -1,55 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <title>Meus Trabalhos - Front End</title>
+    <title>Conversor de Temperatura</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: linear-gradient(135deg, #ff9966, #ff5e62);
+        }
+
+        .container{
+
+            background-color: white;
+
+            padding: 40px;
+
+            width: 420px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+        }
+
+        h1{
+
+            margin-bottom: 30px;
+
+            color: #ff5e62;
+        }
+
+        table{
+
+            width: 100%;
+
+            border-spacing: 15px;
+        }
+
+        td{
+
+            text-align: left;
+        }
+
+        label{
+
+            font-weight: bold;
+
+            color: #333;
+        }
+
+        input{
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: 2px solid #ccc;
+
+            border-radius: 10px;
+
+            outline: none;
+
+            font-size: 16px;
+
+            transition: 0.3s;
+        }
+
+        input:focus{
+
+            border-color: #ff5e62;
+        }
+
+    </style>
+
 </head>
+
 <body>
 
-    <h1>📚 Trabalhos de Front End</h1>
+    <div class="container">
 
-    <ul>
-        <li>
-            <a href="atividade1.html" target="_blank">
-                Atividade 1
-            </a>
-        </li>
+        <h1>🌡️ Conversor de Temperatura</h1>
 
-        <li>
-            <a href="atividade2.html" target="_blank">
-                Atividade 2
-            </a>
-        </li>
+        <table>
 
-        
-        <li>
-            <a href="atividade3.html" target="_blank">
-                Atividade 3
-            </a>
-        </li>
-         <li>
-            <a href="atividade4.html" target="_blank">
-                Atividade 4
-            </a>
-        </li>
-        <li>
-            <a href="atividade5.html" target="_blank">
-                Atividade 5
-            </a>
-        </li>
-        <li>
-            <a href="atividade7.html" target="_blank">
-                Atividade 7
-            </a>
-        </li>
-    </ul>
+            <tr>
+
+                <td>
+                    <label>Celsius (°C)</label>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <input type="number"
+                           id="celsius"
+                           placeholder="Digite em Celsius"
+                           step="0.1">
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <label>Fahrenheit (°F)</label>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <input type="number"
+                           id="fahrenheit"
+                           placeholder="Digite em Fahrenheit"
+                           step="0.1">
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+    <script src="Conversor_de_temperatura.js"></script>
 
 </body>
+
 </html>
-
-
-
-
-
-
-
