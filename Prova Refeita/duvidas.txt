@@ -1,0 +1,16 @@
+QUESTÃO 03: 
+
+Tive dificuldade de saber como implementar os novos grupos na questão 03. 
+Não sabia que tinha que usar document.body.innerHTML = ` ( colocar aqui o que vai ser alterado ) `
+Tive que utilizar IA para entender como colocava elementos dentro do innerHTML pois achei que somente
+colocava os textos que seriam substituídos e não as tags também como <div> ou <ul>.
+
+
+QUESTÃO 04:
+
+Além disso tive dificuldade na questão 04, não sabia como utilizar os bootstraps presentes durante a prova
+e não consegui desenvolver a parte de JavaScript pois eram necessárias funções que eu desconhecia tais como: 
+card.className = "card";
+
+Mesmo utilizando de IA
+para tentar refazer não consegui entender e resolver sozinho. 
