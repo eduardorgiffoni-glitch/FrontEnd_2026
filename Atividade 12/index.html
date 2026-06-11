@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crédito para Festas & Eventos</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: linear-gradient(135deg, #4b006e, #1b0033);
+        }
+
+        .container{
+
+            width: 500px;
+
+            background-color: rgba(255,255,255,0.08);
+
+            backdrop-filter: blur(12px);
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            border: 1px solid rgba(255,255,255,0.2);
+
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
+
+            color: white;
+        }
+
+        h1{
+
+            text-align: center;
+
+            margin-bottom: 30px;
+
+            color: #d58cff;
+        }
+
+        table{
+
+            width: 100%;
+
+            border-spacing: 15px;
+        }
+
+        label{
+
+            font-weight: bold;
+        }
+
+        input,
+        select{
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            outline: none;
+
+            font-size: 16px;
+
+            background-color: rgba(255,255,255,0.12);
+
+            color: white;
+
+            transition: 0.3s;
+        }
+
+        input:focus,
+        select:focus{
+
+            background-color: rgba(255,255,255,0.2);
+
+            box-shadow: 0px 0px 15px rgba(213,140,255,0.5);
+        }
+
+        option{
+
+            color: black;
+        }
+
+        button{
+
+            width: 100%;
+
+            padding: 14px;
+
+            margin-top: 20px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            background: linear-gradient(135deg, #d58cff, #7b2cbf);
+
+            color: white;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover{
+
+            transform: scale(1.03);
+
+            box-shadow: 0px 0px 20px rgba(213,140,255,0.5);
+        }
+
+        #resultado{
+
+            margin-top: 25px;
+
+            padding: 20px;
+
+            border-radius: 15px;
+
+            background-color: rgba(255,255,255,0.08);
+
+            line-height: 35px;
+
+            font-size: 18px;
+
+            border-left: 5px solid #d58cff;
+
+            animation: aparecer 0.5s ease;
+        }
+
+        .destaque{
+
+            color: #d58cff;
+
+            font-weight: bold;
+        }
+
+        @keyframes aparecer{
+
+            from{
+
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to{
+
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎉 Crédito para Eventos</h1>
+
+        <table>
+
+            <tr>
+
+                <td>
+                    <label>Pacote do Evento</label>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    <select id="pacote">
+
+                        <option value="50">
+                            Standard - R$ 50,00
+                        </option>
+
+                        <option value="80">
+                            Premium - R$ 80,00
+                        </option>
+
+                        <option value="120">
+                            Infinity Deluxe - R$ 120,00
+                        </option>
+
+                    </select>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <label>Quantidade de Pessoas</label>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    <input type="number"
+                           id="pessoas"
+                           placeholder="Digite a quantidade">
+
+                </td>
+
+            </tr>
+
+        </table>
+
+        <button id="calcular">
+            Calcular Orçamento
+        </button>
+
+        <div id="resultado"></div>
+
+    </div>
+
+    <script src="CreditoFesta.js"></script>
+
+</body>
+
+</html>
