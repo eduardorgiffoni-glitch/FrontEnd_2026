@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista VIP - Infinity Bank</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: linear-gradient(135deg, #000000, #1c1c1c);
+        }
+
+        .container{
+
+            width: 600px;
+
+            background-color: #111;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            border: 2px solid #ffcc00;
+
+            box-shadow: 0px 10px 30px rgba(255, 204, 0, 0.3);
+        }
+
+        h1{
+
+            text-align: center;
+
+            color: #ffcc00;
+
+            margin-bottom: 30px;
+        }
+
+        .area-input{
+
+            display: flex;
+
+            gap: 10px;
+
+            margin-bottom: 25px;
+        }
+
+        input{
+
+            flex: 1;
+
+            padding: 12px;
+
+            border: 2px solid #444;
+
+            border-radius: 10px;
+
+            background-color: #222;
+
+            color: white;
+
+            font-size: 16px;
+
+            outline: none;
+
+            transition: 0.3s;
+        }
+
+        input:focus{
+
+            border-color: #ffcc00;
+
+            box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
+        }
+
+        button{
+
+            padding: 12px 18px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            cursor: pointer;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn-add{
+
+            background-color: #ffcc00;
+
+            color: black;
+        }
+
+        .btn-add:hover{
+
+            background-color: #ffd633;
+
+            transform: scale(1.03);
+        }
+
+        ul{
+
+            list-style: none;
+        }
+
+        li{
+
+            background-color: #1f1f1f;
+
+            margin-bottom: 15px;
+
+            padding: 15px;
+
+            border-radius: 12px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            color: white;
+
+            border-left: 5px solid #ffcc00;
+
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .botoes{
+
+            display: flex;
+
+            gap: 8px;
+        }
+
+        .btn-concluir{
+
+            background-color: #28a745;
+
+            color: white;
+        }
+
+        .btn-editar{
+
+            background-color: #007bff;
+
+            color: white;
+        }
+
+        .btn-excluir{
+
+            background-color: #dc3545;
+
+            color: white;
+        }
+
+        .btn-concluir:hover,
+        .btn-editar:hover,
+        .btn-excluir:hover{
+
+            transform: scale(1.05);
+        }
+
+        .riscado{
+
+            text-decoration: line-through;
+
+            opacity: 0.6;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>👥 Lista de Convidados VIP</h1>
+
+        <div class="area-input">
+
+            <input type="text"
+                   id="nome"
+                   placeholder="Digite o nome do convidado">
+
+            <button class="btn-add" id="adicionar">
+                Adicionar
+            </button>
+
+        </div>
+
+        <ul id="lista"></ul>
+
+    </div>
+
+    <script src="Lista de Convidados Vips.js"></script>
+
+</body>
+
+</html>
