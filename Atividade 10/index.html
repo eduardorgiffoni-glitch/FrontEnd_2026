@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Validador de CPF</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container{
+
+            background-color: white;
+
+            padding: 40px;
+
+            width: 350px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+        }
+
+        h1{
+            margin-bottom: 25px;
+
+            color: #1e3c72;
+        }
+
+        input{
+
+            width: 100%;
+
+            padding: 12px;
+
+            margin-bottom: 20px;
+
+            border: 2px solid #ccc;
+
+            border-radius: 10px;
+
+            outline: none;
+
+            font-size: 16px;
+
+            transition: 0.3s;
+        }
+
+        input:focus{
+            border-color: #2a5298;
+        }
+
+        button{
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background-color: #2a5298;
+
+            color: white;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background-color: #1e3c72;
+        }
+
+        #resultado{
+
+            margin-top: 20px;
+
+            font-size: 22px;
+
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Validador de CPF</h1>
+
+        <input type="text" id="cpf" placeholder="Digite o CPF">
+
+        <button onclick="validarCPF()">Validar</button>
+
+        <p id="resultado"></p>
+
+    </div>
+
+    <script src="Validador_de_CPF.js"></script>
+
+</body>
+
+</html>
